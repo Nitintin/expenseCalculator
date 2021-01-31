@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+header{
+    background-color: #006fb0;
+    padding: 10px 0;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h2{
+    margin: 5px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer{
+    background-color: #111111;
+    color: #fff;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer div {
+    width: 33.33%;
+    display: inline-block;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Main{
+    width: 100%;
+    background-color: #e2e2e2;
+    padding: 10px 0;
+    height: 686px;
+}
+.stylerDiv{
+    width: 65%;
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expenseTracker{
+    
+    background-color: #fff;
+    padding: 2%;
+    width: 45%; 
+    display: inline-block;
+}
+.dashboard{
+    width: 50%;
+    display: inline-block;
+}
+
+.totalBalance p, .totalBalance h3{
+    display: inline-block;
+}
+
+.incomeExpense .expense, .incomeExpense .income{
+    border: 1px solid black;
+    display: inline-block;
+    width: 48%;
+    margin-right:1%; 
+    text-align: center;
+}
+
+.income{
+    color: seagreen;
+}
+
+.expense{
+    color: sienna;
+}
+
+.transactions .txn{
+    height: 25px;
+    margin-bottom: 2%;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.transactions .txn:hover{
+    background-color: #e1e1e1;
+    box-shadow: 2px 2px 2px #aaaaaa;
+}
+
+.txn .transDetail{
+    display: inline-block;
+    width: 90%;
+}
+
+.txn .transAction{
+    visibility: hidden;
+    width: 10%;
+    transition: 0.3s;
+}
+.txn:hover .transAction{
+    visibility: visible;
+    text-align: center;
+    background-color: tomato;
+    color: #fff;
+    height: 100%;
+    border: none;
+}
+
+.newTransaction input[type='text'], input[type='number']{
+    width: 98%;
+    height: 20px;
+    margin-bottom: 2%;
+}
+
+.txnSubmit{
+    background-color: yellowgreen;
+    color: #fff;
+    width: 40%;
+    margin: 0 30%;
+    border: none;
+    height: 30px;
+}
+
+.newTxnType,.newTxnCat{
+    width: 50%;
+    margin-bottom: 5%;
+    display: inline-block;
+}
+
+.list{
+    height: 135px;
+    overflow: auto;
+}
+.mosaic{
+    position: relative;
+    width: 45%;
+    display: inline-block;
+    border: 1px solid red;
+    height: 300px;
+    overflow: auto;
+    margin: 1%;
+    transition: 1s;
+
+}
+.mosaic .blur{
+    opacity: 0.4;
+}
+
+.mosaic.fullScreen {
+    width: 100%;
+    height: 400px;
+}
+
+.mosaic.fullScreen .blur{
+    opacity: 1;
+}
+.mosaic.fullScreen .fullscreenBtn{
+    display: none;
+}
+.mosaic.smallScreen{
+    width: 30%;
+    height: 100px;
+}
+.fullscreenBtn,.twoBytwoBtn{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 140px;
+    height: 40px;
+    background-color: #006fb0;
+    color: #fff;
+}
+.mosaic.twoBytwo .twoBytwoBtn, .mosaic.smallScreen .twoBytwoBtn{
+    transition: 1s ;
+    display: none;
+}
+
+.mosaic.fullScreen .twoBytwoBtn{
+    top: 88%;
+    left:88%;
+    background-color: red;
+    display: inline-block;
 }
